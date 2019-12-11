@@ -1,8 +1,8 @@
 <Project>
     <PropertyGroup>
-        <Authors>David Driscoll;RLittlesII</Authors>
-        <Company>RocketSurgeonsGuild</Company>
-        <Copyright>Copyright Rocket Surgeons Guild © 2019</Copyright>
+        <Authors>David Driscoll, Rodney Littles II, Rocket Surgeons Guild contributors</Authors>
+        <Company>Rocket Surgeons Guild</Company>
+        <Copyright>Copyright Rocket Surgeons Guild © $([System.DateTime]::Now.ToString('yyyy'))</Copyright>
         <RepositoryUrl>https://github.com/RocketSurgeonsGuild/ObservR.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageProjectUrl>https://github.com/RocketSurgeonsGuild/ObservR</PackageProjectUrl>
