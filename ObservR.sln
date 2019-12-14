@@ -11,6 +11,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{960E79
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObservR", "src\ObservR\ObservR.csproj", "{50DD5D45-A658-4554-AD5D-7BDFEAE16AC5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CDA589C7-EFC3-4A9C-81D9-5D43A3CF6B72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservR.Tests", "test\ObservR.Tests\ObservR.Tests.csproj", "{EC52BEC0-D79C-4076-A70D-10A9B60CB06E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,10 @@ Global
 		{50DD5D45-A658-4554-AD5D-7BDFEAE16AC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50DD5D45-A658-4554-AD5D-7BDFEAE16AC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50DD5D45-A658-4554-AD5D-7BDFEAE16AC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC52BEC0-D79C-4076-A70D-10A9B60CB06E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC52BEC0-D79C-4076-A70D-10A9B60CB06E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC52BEC0-D79C-4076-A70D-10A9B60CB06E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC52BEC0-D79C-4076-A70D-10A9B60CB06E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +38,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5A7C2701-81F7-4EA4-9D72-30164CBA39BE} = {960E79D2-33E2-4E52-8CBD-18EFA367EA82}
 		{50DD5D45-A658-4554-AD5D-7BDFEAE16AC5} = {B380F698-6EB2-42E7-9C7A-CB28BD2A8828}
+		{EC52BEC0-D79C-4076-A70D-10A9B60CB06E} = {CDA589C7-EFC3-4A9C-81D9-5D43A3CF6B72}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {CA1D595A-02A3-4144-AF9E-FF91C9DF22E1}
