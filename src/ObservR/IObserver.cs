@@ -16,6 +16,13 @@ namespace ObservR
         IObservable<TResponse> Send<TResponse>(IRequest<TResponse> request);
 
         /// <summary>
+        /// Send a cold observable.
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <returns>The response.</returns>
+        IObservable<object> Send(object request);
+
+        /// <summary>
         /// Publishes a hot observable.
         /// </summary>
         /// <param name="request">The request.</param>

@@ -1,5 +1,6 @@
 <Project>
     <ItemGroup>
+        <PackageReference Include="Autofac" />
         <PackageReference Include="coverlet.msbuild" />
         <PackageReference Include="FluentAssertions" />
         <PackageReference Include="Microsoft.NET.Test.Sdk" />
