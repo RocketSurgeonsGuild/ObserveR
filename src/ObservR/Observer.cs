@@ -14,6 +14,8 @@ namespace ObservR
     public class Observer : IObserver
     {
         private static readonly ConcurrentDictionary<Type, object> RequestHandlers = new ConcurrentDictionary<Type, object>();
+        private static readonly ConcurrentDictionary<Type, NotificationHandlerWrapper> NotificationHandlers = new ConcurrentDictionary<Type, NotificationHandlerWrapper>();
+
         private readonly HandlerFactory _handlerFactory;
 
         /// <summary>
@@ -34,11 +36,6 @@ namespace ObservR
             }
 
             var requestType = request.GetType();
-            var requestInterfaceType =
-                requestType
-                    .GetInterfaces()
-                    .FirstOrDefault(i => i.GetGenericTypeDefinition() == typeof(IRequest<>));
-
             var handler =
                 (RequestHandlerWrapper<TResponse>)RequestHandlers
                     .GetOrAdd(
@@ -114,7 +111,56 @@ namespace ObservR
         }
 
         /// <inheritdoc/>
-        public IObservable<TResponse> Publish<TResponse>(IRequest<TResponse> request) =>
-            Observable.Return(default(TResponse));
+        public IObservable<Unit> Publish(IRequest request)
+        {
+            if (request == null)
+            {
+                throw new ArgumentNullException(nameof(request));
+            }
+
+            return PublishRequest(request);
+        }
+
+        /// <inheritdoc/>
+        public IObservable<Unit> Publish(object notification)
+        {
+            if (notification == null)
+            {
+                throw new ArgumentNullException(nameof(notification));
+            }
+
+            if (notification is IRequest instance)
+            {
+                return PublishRequest(instance);
+            }
+
+            throw new ArgumentException($"{nameof(notification)} does not implement ${nameof(IRequest)}");
+        }
+
+        /// <summary>
+        /// Override in a derived class to control how the tasks are awaited. By default the implementation is a foreach and await of each handler.
+        /// </summary>
+        /// <param name="allHandlers">Enumerable of tasks representing invoking each notification handler.</param>
+        /// <param name="notification">The notification being published.</param>
+        /// <returns>A task representing invoking all handlers.</returns>
+        protected virtual Unit PublishCore(IEnumerable<Func<IRequest, IObservable<Unit>>> allHandlers, IRequest notification)
+        {
+            foreach (var handler in allHandlers)
+            {
+                handler(notification);
+            }
+
+            return Unit.Default;
+        }
+
+        private IObservable<Unit> PublishRequest(IRequest request)
+        {
+            var requestType = request.GetType();
+            var handler = NotificationHandlers.GetOrAdd(
+                requestType,
+                t => (NotificationHandlerWrapper)Activator.CreateInstance(typeof(NotificationHandlerWrapperImpl<>).MakeGenericType(requestType)));
+
+            return handler.Handle(request, _handlerFactory, PublishCore);
+        }
     }
 }

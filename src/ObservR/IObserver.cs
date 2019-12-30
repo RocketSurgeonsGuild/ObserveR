@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Reactive;
 
 namespace ObservR
 {
@@ -28,6 +29,6 @@ namespace ObservR
         /// <param name="request">The request.</param>
         /// <typeparam name="TResponse">The response type.</typeparam>
         /// <returns>A response.</returns>
-        IObservable<TResponse> Publish<TResponse>(IRequest<TResponse> request);
+        IObservable<Unit> Publish(IRequest request);
     }
 }

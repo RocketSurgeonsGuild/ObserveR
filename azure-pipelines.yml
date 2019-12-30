@@ -45,8 +45,8 @@ jobs:
       GitHubPackages: true
       EnableReleaseNotes: false
       DotNetSdk:
-        - "2.2.x"
-        - "3.0.x"
+        - "2.x"
+        - "3.x"
       NuGetVersion: "5.2.0"
       PublishNuGetPackages: 'Windows'
       Matrix:
