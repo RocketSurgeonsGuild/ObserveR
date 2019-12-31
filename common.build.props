@@ -5,8 +5,9 @@
         <Copyright>Copyright Rocket Surgeons Guild © $([System.DateTime]::Now.ToString('yyyy'))</Copyright>
         <RepositoryUrl>https://github.com/RocketSurgeonsGuild/ObservR.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageProjectUrl>https://github.com/RocketSurgeonsGuild/ObservR</PackageProjectUrl>
-        <PackageIconUrl></PackageIconUrl>
+        <PackageProjectUrl>https://rocketsurgeonsguild.github.io/</PackageProjectUrl>
+        <PublishRepositoryUrl>true</PublishRepositoryUrl>
+        <PackageIcon>images/packageicon.png</PackageIcon>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>observable;actions</PackageTags>
         <LangVersion>latest</LangVersion>
