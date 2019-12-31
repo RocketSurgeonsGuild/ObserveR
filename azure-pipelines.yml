@@ -37,7 +37,7 @@ variables:
 jobs:
   - template: pipeline/nuke.yml@rsg
     parameters:
-      name: 'macOS'
+      name: 'Build'
       dependsOn: GitVersion
       vmImage: "macOS-10.14"
       Configuration: $(Configuration)
@@ -45,6 +45,14 @@ jobs:
       GitHubPackages: true
       EnableReleaseNotes: false
       DotNetSdk:
-        - "2.x"
-        - "3.x"
+        - "2.2.x"
+        - "3.0.x"
       NuGetVersion: "5.2.0"
+      PublishNuGetPackages: 'Windows'
+      Matrix:
+        Windows:
+          BuildName: "Windows"
+          ImageName: "Windows-latest"
+        macOS:
+          BuildName: "macOS"
+          ImageName: "macOS-latest"
