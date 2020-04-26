@@ -3,9 +3,9 @@
         <Authors>David Driscoll, Rodney Littles II, Rocket Surgeons Guild contributors</Authors>
         <Company>Rocket Surgeons Guild</Company>
         <Copyright>Copyright Rocket Surgeons Guild © $([System.DateTime]::Now.ToString('yyyy'))</Copyright>
-        <RepositoryUrl>https://github.com/RocketSurgeonsGuild/ObservR.git</RepositoryUrl>
+        <RepositoryUrl>https://github.com/RocketSurgeonsGuild/ObserveR.git</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
-        <PackageProjectUrl>https://github.com/RocketSurgeonsGuild/ObservR</PackageProjectUrl>
+        <PackageProjectUrl>https://github.com/RocketSurgeonsGuild/ObserveR</PackageProjectUrl>
         <PackageIconUrl></PackageIconUrl>
         <PackageLicenseExpression>MIT</PackageLicenseExpression>
         <PackageTags>observable;actions</PackageTags>

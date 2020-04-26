@@ -2,7 +2,7 @@
 using System.Reactive;
 
 [assembly:SuppressMessage("StyleCop.CSharp.MaintainabilityRules", "SA1402:FileMayOnlyContainASingleType", Justification = "Reviewed.")]
-namespace ObservR
+namespace ObserveR
 {
     /// <summary>
     /// Represents a request sent to the observer.
