@@ -11,7 +11,7 @@ using Autofac.Core;
 using FluentAssertions;
 using Xunit;
 
-namespace ObservR.Tests
+namespace ObserveR.Tests
 {
     public sealed class ObserverTests
     {

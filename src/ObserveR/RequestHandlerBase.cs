@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace ObservR
+namespace ObserveR
 {
     internal abstract class RequestHandlerBase
     {

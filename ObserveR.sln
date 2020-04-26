@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B380F698-6EB
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".build", ".build", "{960E79D2-33E2-4E52-8CBD-18EFA367EA82}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObservR", "src\ObservR\ObservR.csproj", "{50DD5D45-A658-4554-AD5D-7BDFEAE16AC5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserveR", "src\ObserveR\ObserveR.csproj", "{50DD5D45-A658-4554-AD5D-7BDFEAE16AC5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{CDA589C7-EFC3-4A9C-81D9-5D43A3CF6B72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObservR.Tests", "test\ObservR.Tests\ObservR.Tests.csproj", "{EC52BEC0-D79C-4076-A70D-10A9B60CB06E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ObserveR.Tests", "test\ObserveR.Tests\ObserveR.Tests.csproj", "{EC52BEC0-D79C-4076-A70D-10A9B60CB06E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

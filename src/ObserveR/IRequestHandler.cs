@@ -1,7 +1,7 @@
 using System;
 using System.Reactive;
 
-namespace ObservR
+namespace ObserveR
 {
     /// <summary>
     /// Interface defining a handler for a request.
