@@ -53,6 +53,3 @@ jobs:
         Windows:
           BuildName: "Windows"
           ImageName: "Windows-latest"
-        macOS:
-          BuildName: "macOS"
-          ImageName: "macOS-latest"
